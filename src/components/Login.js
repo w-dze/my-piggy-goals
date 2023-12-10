@@ -4,6 +4,7 @@ import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import WelcomeBack from "../animation/WelcomeBack";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -36,40 +37,43 @@ function Login() {
   };
 
   return (
-    <div className="login-container">
-      <h2>Login</h2>
-      {error && <Alert variant="danger">{error}</Alert>}
-      <Form>
-        <Form.Group controlId="formBasicEmail">
-          <Form.Control
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </Form.Group>
+    <>
+      <WelcomeBack />
+      <div className="login-container">
+        <h2>Login</h2>
+        {error && <Alert variant="danger">{error}</Alert>}
+        <Form>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Control
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Form.Group>
 
-        <Form.Group controlId="formBasicPassword">
-          <Form.Control
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </Form.Group>
+          <Form.Group controlId="formBasicPassword">
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Form.Group>
 
-        <Button variant="secondary" onClick={handleLogin}>
-          Login
-        </Button>
+          <Button variant="secondary" onClick={handleLogin}>
+            Login
+          </Button>
 
-        <span className="underline">
-          Not Registered?
-          <button className="linkBtn" onClick={handleNoUser}>
-            Create Account
-          </button>
-        </span>
-      </Form>
-    </div>
+          <span className="underline">
+            Not Registered?
+            <button className="linkBtn" onClick={handleNoUser}>
+              Create Account
+            </button>
+          </span>
+        </Form>
+      </div>
+    </>
   );
 }
 

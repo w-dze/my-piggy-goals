@@ -4,6 +4,7 @@ import { auth } from "../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import "./SignUp.css";
+import PreLoader from "../animation/PreLoader";
 
 function SignUp() {
   const [email, setEmail] = useState("");
@@ -39,41 +40,44 @@ function SignUp() {
   };
 
   return (
-    <div className="signup-container">
-      <h2>Sign Up</h2>
-      <Form onSubmit={handleSignUp}>
-        <Form.Group controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Enter email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </Form.Group>
+    <>
+      <PreLoader />
+      <div className="signup-container">
+        <h2>Sign Up</h2>
+        <Form onSubmit={handleSignUp}>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="Enter email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Form.Group>
 
-        <Form.Group controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </Form.Group>
+          <Form.Group controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Form.Group>
 
-        <Button variant="primary" type="submit">
-          Sign Up
-        </Button>
+          <Button variant="primary" type="submit">
+            Sign Up
+          </Button>
 
-        <span className="underline">
-          Have an Account?
-          <button className="linkBtn" onClick={handleHaveUser}>
-            Login
-          </button>
-        </span>
-      </Form>
-    </div>
+          <span className="underline">
+            Have an Account?
+            <button className="linkBtn" onClick={handleHaveUser}>
+              Login
+            </button>
+          </span>
+        </Form>
+      </div>
+    </>
   );
 }
 

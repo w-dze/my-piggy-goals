@@ -8,7 +8,7 @@ import { useGetTransactions } from "./hook/useGetTransactions";
 
 function Home() {
   const navigate = useNavigate();
-  const { userID } = useGetUserInfo();
+  const { userID, email } = useGetUserInfo();
 
   const { addTransaction } = useAddTransaction();
   const { transactions, transactionTotals } = useGetTransactions();
@@ -51,14 +51,13 @@ function Home() {
   return (
     <>
       <div className="head">
-        <h1>Piggy Goals</h1>
-        <h2>Hello, {userID}</h2>
+        <h1>My Piggy Goals</h1>
+        <h2>Hello, {email}</h2>
         <button onClick={handleLogout}>Logout</button>
       </div>
 
       <div className="expense-tracker">
         <div className="container">
-          <h1>Expense Tracker</h1>
           <div className="balance">
             <h3>Your Balance </h3>
             {balance >= 0 ? <h2> ${balance}</h2> : <h2> -${balance * -1}</h2>}

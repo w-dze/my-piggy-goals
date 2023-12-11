@@ -44,32 +44,34 @@ function Login() {
         {error && <Alert variant="danger">{error}</Alert>}
         <Form>
           <Form.Group controlId="formBasicEmail">
+            <Form.Label>Email:</Form.Label>
             <Form.Control
               type="email"
-              placeholder="Email"
+              placeholder="Enter email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </Form.Group>
 
           <Form.Group controlId="formBasicPassword">
+            <Form.Label>Password:</Form.Label>
             <Form.Control
               type="password"
-              placeholder="Password"
+              placeholder="Enter password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
 
-          <Button variant="secondary" onClick={handleLogin}>
+          <Button variant="primary" type="submit" onClick={handleLogin}>
             Login
           </Button>
 
           <span className="underline">
             Not Registered?
-            <button className="linkBtn" onClick={handleNoUser}>
+            <Button className="sbtButton" variant="link" onClick={handleNoUser}>
               Create Account
-            </button>
+            </Button>
           </span>
         </Form>
       </div>

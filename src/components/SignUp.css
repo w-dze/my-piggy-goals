@@ -28,7 +28,7 @@ h2 {
   font-size: 16px;
 }
 
-button[type="submit"] {
+.sbtButton {
   width: 100%;
   padding: 10px;
   font-size: 16px;

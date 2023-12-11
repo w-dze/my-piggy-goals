@@ -44,9 +44,10 @@ function SignUp() {
       <PreLoader />
       <div className="signup-container">
         <h2>Sign Up</h2>
-        <Form onSubmit={handleSignUp}>
+
+        <Form>
           <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
+            <Form.Label>Email: </Form.Label>
             <Form.Control
               type="email"
               placeholder="Enter email"
@@ -56,24 +57,28 @@ function SignUp() {
           </Form.Group>
 
           <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
+            <Form.Label>Password: </Form.Label>
             <Form.Control
               type="password"
-              placeholder="Password"
+              placeholder="Enter password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
 
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" onClick={handleSignUp}>
             Sign Up
           </Button>
 
           <span className="underline">
             Have an Account?
-            <button className="linkBtn" onClick={handleHaveUser}>
+            <Button
+              className="sbtButton"
+              variant="link"
+              onClick={handleHaveUser}
+            >
               Login
-            </button>
+            </Button>
           </span>
         </Form>
       </div>

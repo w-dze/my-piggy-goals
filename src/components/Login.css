@@ -16,6 +16,12 @@ h2 {
   margin-bottom: 20px;
 }
 
+.form-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
 .form-control {
   width: 100%;
   padding: 10px;

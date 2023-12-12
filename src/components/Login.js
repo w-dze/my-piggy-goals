@@ -4,7 +4,6 @@ import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
-import WelcomeBack from "../animation/WelcomeBack";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -38,7 +37,6 @@ function Login() {
 
   return (
     <>
-      <WelcomeBack />
       <div className="login-container">
         <h2>Login</h2>
         {error && <Alert variant="danger">{error}</Alert>}
@@ -63,16 +61,13 @@ function Login() {
             />
           </Form.Group>
 
-          <Button variant="primary" type="submit" onClick={handleLogin}>
+          <Button variant="primary" onClick={handleLogin}>
             Login
           </Button>
 
-          <span className="underline">
-            Not Registered?
-            <Button className="sbtButton" variant="link" onClick={handleNoUser}>
-              Create Account
-            </Button>
-          </span>
+          <Button className="sbtButton" variant="link" onClick={handleNoUser}>
+            Create Account
+          </Button>
         </Form>
       </div>
     </>

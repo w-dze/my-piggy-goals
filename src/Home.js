@@ -8,7 +8,7 @@ import { useGetTransactions } from "./hook/useGetTransactions";
 
 function Home() {
   const navigate = useNavigate();
-  const { userID, email } = useGetUserInfo();
+  const { email } = useGetUserInfo();
 
   const { addTransaction } = useAddTransaction();
   const { transactions, transactionTotals } = useGetTransactions();

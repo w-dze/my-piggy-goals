@@ -15,10 +15,10 @@ function App() {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
       if (authUser) {
-        // User is signed in.
+        // user is signed in
         setUser(authUser);
       } else {
-        // User is signed out.
+        // user is signed out
         setUser(null);
       }
     });

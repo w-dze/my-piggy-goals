@@ -66,7 +66,12 @@ function SignUp() {
             />
           </Form.Group>
 
-          <Button variant="primary" type="submit" onClick={handleSignUp}>
+          <Button
+            className="sbtBtn"
+            variant="primary"
+            type="submit"
+            onClick={handleSignUp}
+          >
             Sign Up
           </Button>
 

@@ -9,9 +9,9 @@ const WelcomeBack = () => {
   return (
     <div className="preloader">
       <div className="texts-container">
+        <span>Yay!</span>
         <span>Welcome</span>
         <span>Back</span>
-        <span>:/</span>
       </div>
     </div>
   );

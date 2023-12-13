@@ -27,12 +27,6 @@ export const preLoaderAnim = () => {
       ease: "Power3.easeOut",
     })
 
-    .from(".landing__top .sub", {
-      duration: 0.5,
-      opacity: 0,
-      y: 80,
-      ease: "expo.easeOut",
-    })
     .to(
       ".preloader",
       {

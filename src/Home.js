@@ -7,6 +7,7 @@ import { useGetUserInfo } from "./hook/useGetUserInfo";
 import { useGetTransactions } from "./hook/useGetTransactions";
 import "./Home.css";
 import SoundComponent from "./sound/SoundComponent";
+import WelcomeBack from "./animation/WelcomeBack";
 
 function Home() {
   const navigate = useNavigate();
@@ -44,6 +45,7 @@ function Home() {
   const handleLogout = async () => {
     try {
       await auth.signOut();
+      localStorage.clear();
       navigate("/login"); // Redirect to login after logout
     } catch (error) {
       console.error("Error signing out:", error);
@@ -52,6 +54,7 @@ function Home() {
 
   return (
     <>
+      <WelcomeBack />
       <div className="everything">
         <div className="head">
           <Stack direction="horizontal" gap="2" className="mb-4">

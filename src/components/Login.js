@@ -4,7 +4,7 @@ import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
-import WelcomeBack from "../animation/WelcomeBack";
+import RightHere from "../animation/RightHere";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -38,7 +38,7 @@ function Login() {
 
   return (
     <>
-      <WelcomeBack />
+      <RightHere />
       <div className="body">
         {error && <Alert variant="danger">{error}</Alert>}
         <Form className="signin-form">

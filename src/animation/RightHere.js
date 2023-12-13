@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import "./PreLoader.css";
 import { preLoaderAnim } from "../animation";
-const PreLoader = () => {
+
+const RightHere = () => {
   useEffect(() => {
     preLoaderAnim();
   }, []);
@@ -9,12 +10,12 @@ const PreLoader = () => {
   return (
     <div className="preloader">
       <div className="texts-container">
-        <span>Yay!</span>
-        <span>Right</span>
-        <span>Place</span>
+        <span>Welcome</span>
+        <span>Back</span>
+        <span>😊</span>
       </div>
     </div>
   );
 };
 
-export default PreLoader;
+export default RightHere;

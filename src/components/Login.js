@@ -39,7 +39,7 @@ function Login() {
   return (
     <>
       <WelcomeBack />
-      <div className="bodyarea">
+      <div className="body">
         {error && <Alert variant="danger">{error}</Alert>}
         <Form className="signin-form">
           <h2>Login</h2>

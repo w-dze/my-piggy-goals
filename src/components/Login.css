@@ -1,11 +1,20 @@
-.login-container {
+.bodyarea {
+  background-image: url("https://cdn.pixabay.com/photo/2017/10/25/19/46/piggy-2889044_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.signin-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-width: 400px;
-  margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #f9f9f9;
-  margin-top: 10vh;
 }
 
 h2 {
@@ -20,7 +29,6 @@ h2 {
 .form-label {
   font-weight: bold;
   display: block;
-  margin-top: 5px;
   margin-bottom: 5px;
 }
 

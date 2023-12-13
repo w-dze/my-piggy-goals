@@ -1,0 +1,74 @@
+.head {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.balance {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.balance h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.balance h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.income,
+.expenses {
+  margin-bottom: 15px;
+}
+
+.income h4,
+.expenses h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.income p,
+.expenses p {
+  font-size: 18px;
+  color: green;
+}
+
+.expenses p {
+  color: red;
+}
+
+.add-transaction {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.add-transaction input[type="text"],
+.add-transaction input[type="number"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.radioBtns {
+  margin: 20px;
+}
+
+label {
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.add-transaction label {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.addBtn {
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}

@@ -42,10 +42,9 @@ function SignUp() {
   return (
     <>
       <PreLoader />
-      <div className="signup-container">
-        <h2>Sign Up</h2>
-
-        <Form>
+      <div className="bodyarea">
+        <Form className="signup-form">
+          <h2>Sign Up</h2>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email: </Form.Label>
             <Form.Control

@@ -39,45 +39,39 @@ function Login() {
   return (
     <>
       <WelcomeBack />
-      <div className="body">
-        <div className="login-container">
+      <div className="bodyarea">
+        {error && <Alert variant="danger">{error}</Alert>}
+        <Form className="signin-form">
           <h2>Login</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <Form>
-            <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email:</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="Enter email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </Form.Group>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Label>Email:</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="Enter email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Form.Group>
 
-            <Form.Group controlId="formBasicPassword">
-              <Form.Label>Password:</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder="Enter password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </Form.Group>
+          <Form.Group controlId="formBasicPassword">
+            <Form.Label>Password:</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Enter password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Form.Group>
 
-            <Button
-              className="loginBtn"
-              variant="primary"
-              onClick={handleLogin}
-            >
-              Login
-            </Button>
+          <Button className="loginBtn" variant="primary" onClick={handleLogin}>
+            Login
+          </Button>
 
-            <span>Don't have an Account?</span>
-            <Button className="sbtButton" variant="link" onClick={handleNoUser}>
-              Create Account
-            </Button>
-          </Form>
-        </div>
+          <span>Don't have an Account?</span>
+          <Button className="sbtButton" variant="link" onClick={handleNoUser}>
+            Create Account
+          </Button>
+        </Form>
       </div>
     </>
   );

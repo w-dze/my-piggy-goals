@@ -28,7 +28,7 @@ export const preLoaderAnim = () => {
     })
 
     .from(".landing__top .sub", {
-      duration: 0.2,
+      duration: 0.5,
       opacity: 0,
       y: 80,
       ease: "expo.easeOut",
@@ -36,7 +36,7 @@ export const preLoaderAnim = () => {
     .to(
       ".preloader",
       {
-        duration: 0.2,
+        duration: 0.5,
         height: "0vh",
         ease: "Power3.easeOut",
         onComplete: mobileLanding(),
@@ -44,7 +44,7 @@ export const preLoaderAnim = () => {
       "-=2"
     )
     .to(".preloader", {
-      duration: 0.2,
+      duration: 0.5,
       css: { display: "none" },
     });
 };
@@ -53,7 +53,7 @@ export const preLoaderAnim = () => {
 export const fadeUp = (el, delay = 0) => {
   tl.from(el, {
     y: 150,
-    duration: 1,
+    duration: 1.5,
     delay,
     opacity: 0,
     ease: "power3.Out",
@@ -63,7 +63,7 @@ export const fadeUp = (el, delay = 0) => {
 export const mobileLanding = () => {
   window.innerWidth < 763 &&
     tl.from(".landing__main2", {
-      duration: 1,
+      duration: 1.5,
       delay: 0,
       opacity: 0,
       y: 80,

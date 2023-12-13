@@ -6,6 +6,7 @@ import { useAddTransaction } from "./hook/useAddTransaction";
 import { useGetUserInfo } from "./hook/useGetUserInfo";
 import { useGetTransactions } from "./hook/useGetTransactions";
 import "./Home.css";
+import SoundComponent from "./sound/SoundComponent";
 
 function Home() {
   const navigate = useNavigate();
@@ -70,6 +71,7 @@ function Home() {
             >
               My Piggy Goals
             </h1>
+            <SoundComponent />
             <Button variant="secondary" onClick={handleLogout}>
               Logout
             </Button>

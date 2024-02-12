@@ -135,7 +135,7 @@ function Home() {
                 <label htmlFor="income">Income</label>
               </div>
               <div className="addBtn">
-                <Button onClick={handleExpense}>Add Transcation</Button>
+                <Button onClick={handleExpense}>Add Transaction</Button>
               </div>
 
               <div className="transcations">

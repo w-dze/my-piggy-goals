@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/my-piggy-goals/static/css/main.0bf447cf.css",
+    "main.js": "/my-piggy-goals/static/js/main.62527df0.js",
+    "static/media/money.mp3": "/my-piggy-goals/static/media/money.157fa0b5482eb82a29c1.mp3",
+    "index.html": "/my-piggy-goals/index.html",
+    "main.0bf447cf.css.map": "/my-piggy-goals/static/css/main.0bf447cf.css.map",
+    "main.62527df0.js.map": "/my-piggy-goals/static/js/main.62527df0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0bf447cf.css",
+    "static/js/main.62527df0.js"
+  ]
+}
